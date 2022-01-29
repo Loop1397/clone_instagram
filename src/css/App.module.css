@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__container {
+    background-color: aquamarine;
+    width: 975px;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container__box {
+    background-color: tomato;
+    width: 935px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.board__content {
+    background-color: thistle;
+    width: 614px;
+}
+
+.side__menu {
+    background-color: wheat;
+    width: 293px;
+}
