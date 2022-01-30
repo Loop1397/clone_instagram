@@ -1,0 +1,61 @@
+.header__container {
+    background-color: aquamarine;
+    width: 975px;
+    padding: 0px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__logo__button {
+    /* background-color: red; */
+    width: 334px;
+    height: 36px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__logo__button__image {
+    width: 103px;
+    height: 29px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+}
+
+.header__search__container {
+    background-color: #efefef;
+    width: 268px;
+    height: 36px;
+    text-decoration: none solid rgb(142, 142, 142);
+    text-align: left;
+    border-radius: 8px;
+    font-size: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__search__inputbox {
+    background-color: #efefef;
+    width: 236px;
+    height: 25px;
+    cursor: text;
+    padding: 0px;
+    border: 0px;
+    border-width: 0;
+    font-size: 16px;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    /* 포커싱된 인풋박스의 하이라이트 제거하기 */
+    outline: none;
+}
+
+::placeholder {
+    color: #8e8e8e;
+}

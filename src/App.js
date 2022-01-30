@@ -2,8 +2,12 @@ import styles from "./css/App.module.css";
 import Post from "./Post";
 import NewPost from "./NewPost";
 import Button from "./Button";
+import Header from "./Header";
 
 function App() {
+    /**
+     * 버튼 클릭시 url 이동하는 메소드
+     */
     const onclick = url => {
         window.location.href = url;
     };
@@ -11,9 +15,7 @@ function App() {
     return (
         <section>
             <header>
-                <div className={styles.header__container}>
-                    <Button style={styles.logo__button} imgStyle={styles.logo__button__image} onclick={url => onclick(url)} image="/images/logo.png" url="https://naver.com" />
-                </div>
+                <Header />
             </header>
             <div></div>
             <div className={styles.container}>

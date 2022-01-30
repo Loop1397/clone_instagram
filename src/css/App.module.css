@@ -15,16 +15,6 @@ header {
     position: fixed;
 }
 
-.header__container {
-    background-color: aquamarine;
-    width: 975px;
-    padding: 0px 20px;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
 .container {
     background-color: #fafafa;
     margin-top: 60px;
@@ -52,21 +42,4 @@ header {
 .side__menu {
     background-color: wheat;
     width: 293px;
-}
-
-.logo__button {
-    /* background-color: red; */
-    width: 334px;
-    height: 36px;
-    cursor: pointer;
-    position: relative;
-}
-
-.logo__button__image {
-    width: 103px;
-    height: 29px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: 0;
 }
