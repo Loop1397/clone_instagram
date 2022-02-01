@@ -1,0 +1,26 @@
+.nav__container {
+    /* background-color: violet; */
+    width: 333.5px;
+    height: 24px;
+    padding-left: 79.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav__button {
+    /* background-color: red; */
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav__button__image {
+    /* background-size: contain; */
+    /* background-repeat: no-repeat; */
+    width: 24px;
+    height: 24px;
+    position: inline;
+    bottom: 0;
+}

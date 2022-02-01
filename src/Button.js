@@ -1,6 +1,9 @@
 function Button(prop) {
-    const handleOnClick = () => {
-        prop.onclick(prop.url);
+    /**
+     * 버튼 클릭시 url 이동하는 메소드
+     */
+    const onClick = () => {
+        window.location.href = prop.url;
     };
 
     const textBtn = () => {
@@ -10,7 +13,7 @@ function Button(prop) {
         return <img src={prop.image} className={prop.imgStyle} alt="image" />;
     };
     return (
-        <div className={prop.style} onClick={handleOnClick}>
+        <div className={prop.style} onClick={onClick}>
             {prop.text ? textBtn() : imageBtn()}
         </div>
     );

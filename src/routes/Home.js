@@ -1,17 +1,10 @@
-import styles from "./css/App.module.css";
-import Post from "./Post";
-import NewPost from "./NewPost";
-import Button from "./Button";
-import Header from "./Header";
+import styles from "../css/App.module.css";
+import Post from "../Post";
+import NewPost from "../NewPost";
+// import Button from "../Button";
+import Header from "../Header";
 
-function App() {
-    /**
-     * 버튼 클릭시 url 이동하는 메소드
-     */
-    const onclick = url => {
-        window.location.href = url;
-    };
-
+function Home() {
     return (
         <section>
             <header>
@@ -32,4 +25,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;

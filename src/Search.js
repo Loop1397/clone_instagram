@@ -13,8 +13,8 @@ function Search() {
     };
 
     return (
-        <div className={styles.search__container}>
-            <div onClick={onClick} onBlur={onBlur}>
+        <div className={styles.search__container} onClick={onClick} onBlur={onBlur}>
+            <div>
                 {!clicked ? (
                     <div className={styles.search__box}>
                         <span color="#8e8e8e">+ {value === "" ? "검색" : value}</span>

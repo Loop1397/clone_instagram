@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.module.css";
-import App from "./App";
+import Instagram from "./Instagram";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <Instagram />
     </React.StrictMode>,
     document.getElementById("root")
 );
