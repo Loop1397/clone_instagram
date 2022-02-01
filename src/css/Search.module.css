@@ -1,0 +1,62 @@
+.search__container {
+    background-color: #efefef;
+    width: 268px;
+    height: 36px;
+    text-decoration: none solid rgb(142, 142, 142);
+    text-align: left;
+    border-radius: 8px;
+    font-size: 16px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search__box {
+    background-color: #efefef;
+    width: 236px;
+    height: 25px;
+    padding: 0px;
+    border: 0px;
+    border-width: 0;
+    font-size: 16px;
+    cursor: text;
+    color: #8e8e8e;
+
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search__input__text {
+    background-color: #efefef;
+    width: 236px;
+    height: 25px;
+    padding: 2px 0 0 0;
+    border: 0px;
+    border-width: 0;
+    font-size: 16px;
+
+    display: table-cell;
+    vertical-align: middle;
+
+    /* 포커싱된 인풋박스의 하이라이트 제거하기 */
+    outline: none;
+}
+
+.search__delete {
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    left: 236px;
+    right: 12px;
+
+    cursor: pointer;
+    z-index: 3;
+}
+
+::placeholder {
+    color: #8e8e8e;
+}
