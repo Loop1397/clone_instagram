@@ -1,4 +1,4 @@
-import styles from "../css/App.module.css";
+import styles from "../css/Home.module.css";
 import Post from "../Post";
 import NewPost from "../NewPost";
 // import Button from "../Button";
@@ -10,7 +10,6 @@ function Home() {
             <header>
                 <Header />
             </header>
-            <div></div>
             <div className={styles.container}>
                 <div className={styles.container__box}>
                     <div className={styles.board__content}>

@@ -10,7 +10,7 @@ function Header() {
 
     return (
         <div className={styles.header__container}>
-            <Button style={styles.header__logo__button} imgStyle={styles.header__logo__button__image} onclick={url => onclick(url)} image="/images/logo.png" url="https://naver.com" />
+            <Button style={styles.header__logo__button} imgStyle={styles.header__logo__button__image} image="/images/logo.png" url="https://naver.com" />
             <Search />
             <Navigator />
         </div>

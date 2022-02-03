@@ -1,3 +1,9 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .nav__container {
     /* background-color: violet; */
     width: 333.5px;
