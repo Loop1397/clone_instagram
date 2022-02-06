@@ -3,6 +3,7 @@ import Post from "../Post";
 import NewPost from "../NewPost";
 // import Button from "../Button";
 import Header from "../Header";
+import SideBar from "../SideBar";
 
 function Home() {
     return (
@@ -17,7 +18,9 @@ function Home() {
                         <Post />
                         <Post />
                     </div>
-                    <div className={styles.side__menu}>오</div>
+                    <div className={styles.side__bar}>
+                        <SideBar />
+                    </div>
                 </div>
             </div>
         </section>
