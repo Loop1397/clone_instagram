@@ -18,9 +18,7 @@ function Home() {
                         <Post />
                         <Post />
                     </div>
-                    <div className={styles.side__bar}>
-                        <SideBar />
-                    </div>
+                    <SideBar />
                 </div>
             </div>
         </section>

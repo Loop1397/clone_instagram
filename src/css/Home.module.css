@@ -38,13 +38,3 @@ header {
     /* background-color: thistle; */
     width: 614px;
 }
-
-.side__bar {
-    background-color: wheat;
-    width: 293px;
-    height: 100%;
-    position: fixed;
-    top: 94px;
-    bottom: -124px;
-    left: 900px;
-}
