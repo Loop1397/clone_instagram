@@ -17,7 +17,7 @@ function Search() {
             <div>
                 {!clicked ? (
                     <div className={styles.search__box}>
-                        <span color="#8e8e8e">+ {value === "" ? "검색" : value}</span>
+                        <span>+ {value === "" ? "검색" : value}</span>
                         {/* 🔍 */}
                     </div>
                 ) : (
