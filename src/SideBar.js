@@ -32,6 +32,15 @@ function SideBar() {
                     <RecommandProfile image="/images/twitter.png" id="twitter" category="인기" />
                 </div>
             </div>
+            <div className={styles.footer__box}>
+                <div className={styles.footer__link}>
+                    <a href="https://about.instagram.com">소개</a> · <a href="#">도움말</a> · <a href="#">홍보 센터</a> · <a href="#">API</a> · <a href="#">채용 정보</a> ·{" "}
+                    <a href="#">개인정보처리방침</a> · <a href="#">약관</a> · <a href="#">위치</a> · <a href="#">인기 계정</a> · <a href="#">해시태그</a> · <a href="#">언어</a>
+                </div>
+                <div>
+                    <span className={styles.footer__copyright}>© 2022 INSTAGRAM FROM META</span>
+                </div>
+            </div>
         </div>
     );
 }
