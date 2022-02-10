@@ -9,7 +9,6 @@ function Search() {
     const onChange = e => setValue(e.target.value);
     const deleteValue = () => {
         setValue("");
-        console.log("ㅎㅇ!");
     };
 
     return (

@@ -1,7 +1,6 @@
 import styles from "../css/Home.module.css";
 import Post from "../Post";
 import NewPost from "../NewPost";
-// import Button from "../Button";
 import Header from "../Header";
 import SideBar from "../SideBar";
 

@@ -1,7 +1,15 @@
+import { useState } from "react";
 import Button from "./Button";
 import styles from "./css/Post.module.css";
+import Modal from "./Modal";
 
 function Post() {
+    const [isOpen, setIsOpen] = useState(false);
+    const openModal = () => {
+        setIsOpen(true);
+        console.log("Hello!");
+    };
+
     return (
         <div>
             <div className={styles.container}>
@@ -14,7 +22,10 @@ function Post() {
                             <Button style={styles.header__profile__id__button} text="chrome" url="/id" />
                         </div>
                     </div>
-                    <Button style={styles.header__control__button} text="···" url="/id" />
+                    <div className={styles.header__control__button} onClick={openModal}>
+                        <span>···</span>
+                        <div>{isOpen && <Modal message="This is Modal" />}</div>
+                    </div>
                 </div>
                 <div className={styles.container__image}>사진</div>
                 <div className={styles.container__content}>게시글 내용</div>
