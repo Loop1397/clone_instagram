@@ -4,7 +4,7 @@ import Explore from "./routes/Explore";
 import Home from "./routes/Home";
 import ModalPage from "./ModalPage";
 
-function MovieApp() {
+function Instagram() {
     return (
         <Router>
             <Routes>
@@ -18,4 +18,4 @@ function MovieApp() {
     );
 }
 
-export default MovieApp;
+export default Instagram;

@@ -7,7 +7,13 @@ function Post() {
     const [isOpen, setIsOpen] = useState(false);
     const openModal = () => {
         setIsOpen(true);
-        console.log("Hello!");
+        // console.log("Hi!");
+    };
+
+    const closeModal = e => {
+        setIsOpen(false);
+        // console.log("bye!");
+        e.stopPropagation(); //이벤트 버블링을 막기 위한 메소드
     };
 
     return (
@@ -24,7 +30,7 @@ function Post() {
                     </div>
                     <div className={styles.header__control__button} onClick={openModal}>
                         <span>···</span>
-                        <div>{isOpen && <Modal message="This is Modal" />}</div>
+                        {isOpen ? <Modal isOpen={isOpen} closeModal={closeModal} /> : null}
                     </div>
                 </div>
                 <div className={styles.container__image}>사진</div>

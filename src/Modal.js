@@ -1,14 +1,25 @@
-import { createPortal } from "react-dom";
+import ReactModal from "react-modal";
+import styles from "./css/Modal.module.css";
 
 function Modal(props) {
-    const { message } = props;
-    return createPortal(
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "fixed", bottom: 30, left: 0, width: "100%", height: 50 }}>
-            <div style={{ width: "30%", textAlign: "center", borderRadius: 30, background: "grey", fontSize: 20, color: "white" }}>
-                <p>{message}</p>
+    const { isOpen, closeModal } = props;
+
+    return (
+        <ReactModal isOpen={isOpen} className={styles.modal__background}>
+            <div className={styles.modal__box} onClick={closeModal}>
+                <div className={styles.modal__content}>
+                    <button style={{ color: `#ed4056`, border: `none`, fontWeight: `700`, borderTopLeftRadius: `10px`, borderTopRightRadius: `10px` }}>신고</button>
+                    <button style={{ color: `#ed4056`, borderTop: `1px solid #dbdbdb`, fontWeight: `700` }}>팔로우 취소</button>
+                    <button style={{ borderTop: `1px solid #dbdbdb` }}>게시물로 이동</button>
+                    <button style={{ borderTop: `1px solid #dbdbdb` }}>공유 대상...</button>
+                    <button style={{ borderTop: `1px solid #dbdbdb` }}>링크 복사</button>
+                    <button style={{ borderTop: `1px solid #dbdbdb` }}>퍼가기</button>
+                    <button style={{ borderTop: `1px solid #dbdbdb`, borderBottomLeftRadius: `10px`, borderBottomRightRadius: `10px` }} onClick={closeModal}>
+                        취소
+                    </button>
+                </div>
             </div>
-        </div>,
-        document.getElementById("modal")
+        </ReactModal>
     );
 }
 
