@@ -4,6 +4,7 @@ import styles from "./css/Modal.module.css";
 function Modal(props) {
     const { isOpen, closeModal } = props;
 
+    //취소버튼이나 모달 창 바깥 부분 클릭 시 모달 창 닫기
     return (
         <ReactModal isOpen={isOpen} className={styles.modal__background}>
             <div className={styles.modal__box} onClick={closeModal}>
