@@ -47,7 +47,8 @@
     width: auto;
     max-width: 74px;
     height: 16px;
-    color: #8e8e8e;
+    /* color: #8e8e8e; */
+    color: #262626;
     font-size: 12px;
     line-height: 16px;
     display: inline;
