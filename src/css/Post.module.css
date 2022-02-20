@@ -124,12 +124,13 @@
     background-image: url("/public/images/bonobono.png");
 } */
 
-.each-slide > div {
+.each__slide > div {
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     height: 350px;
+    background-image: url("/public/images/sea1.jpeg");
 }
 
 .container__content {
