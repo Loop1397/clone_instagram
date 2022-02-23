@@ -37,18 +37,15 @@ function Post() {
                     </div>
                 </div>
                 {/* <div className={styles.container__image}>사진</div> */}
-                <Slide easing="ease">
+                <Slide easing="ease" className={styles.slide}>
                     <div className={styles.each__slide}>
-                        <div></div>
-                        {/* <div style={{ backgroundImage: `url(${slideImages[0]})` }}></div> */}
+                        <div style={{ backgroundImage: `url(${slideImages[0]})` }}></div>
                     </div>
                     <div className={styles.each__slide}>
-                        <div></div>
-                        {/* <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div> */}
+                        <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
                     </div>
                     <div className={styles.each__slide}>
-                        <div></div>
-                        {/* <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div> */}
+                        <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
                     </div>
                 </Slide>
                 <div className={styles.container__content}>게시글 내용</div>

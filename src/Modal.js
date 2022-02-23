@@ -1,5 +1,6 @@
 import ReactModal from "react-modal";
 import styles from "./css/Modal.module.css";
+import { CSSTransition } from "react-transition-group";
 
 function Modal(props) {
     const { isOpen, closeModal } = props;
