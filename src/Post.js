@@ -6,12 +6,14 @@ import { Slide } from "react-slideshow-image";
 
 function Post() {
     const [isOpen, setIsOpen] = useState(false);
+    const [slide, setSlide] = useState(0);
+
+    const slideImages = [{ width: `100%`, height: `100%`, backgroundImage: `url("/public/images/sea1.jpeg")` }, "/public/images/sea2.jpeg", "/public/images/sea3.jpeg"];
+
     const openModal = () => {
         setIsOpen(true);
         // console.log("Hi!");
     };
-
-    const slideImages = ["/public/images/sea1.jpeg", "/public/images/sea2.jpeg", "/public/images/sea3.jpeg"];
 
     const closeModal = e => {
         setIsOpen(false);
@@ -36,18 +38,17 @@ function Post() {
                         {isOpen ? <Modal isOpen={isOpen} closeModal={closeModal} /> : null}
                     </div>
                 </div>
-                {/* <div className={styles.container__image}>사진</div> */}
-                <Slide easing="ease" className={styles.slide}>
-                    <div className={styles.each__slide}>
-                        <div style={{ backgroundImage: `url(${slideImages[0]})` }}></div>
-                    </div>
-                    <div className={styles.each__slide}>
-                        <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
-                    </div>
-                    <div className={styles.each__slide}>
-                        <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
-                    </div>
-                </Slide>
+                <div className={styles.container__image}>
+                    <div style={slideImages[0]}>ㅎㅇ</div>
+                </div>
+                {/* <div className={styles.each__slide}>
+                </div> */}
+                {/* <div className={styles.each__slide}>
+                    <div style={{ backgroundImage: `url(${slideImages[1]})` }}></div>
+                </div>
+                <div className={styles.each__slide}>
+                    <div style={{ backgroundImage: `url(${slideImages[2]})` }}></div>
+                </div> */}
                 <div className={styles.container__content}>게시글 내용</div>
                 <div className={styles.container__comment}>코멘트</div>
             </div>
