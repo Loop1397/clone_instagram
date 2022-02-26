@@ -3,6 +3,7 @@ import Direct from "./routes/Direct";
 import Explore from "./routes/Explore";
 import Home from "./routes/Home";
 import ModalPage from "./ModalPage";
+import Create from "./routes/Create";
 
 function Instagram() {
     return (
@@ -13,6 +14,7 @@ function Instagram() {
                 <Route path="/" element={<Home />} />
                 <Route path="/direct/inbox" element={<Direct />} />
                 <Route path="/explore/" element={<Explore />} />
+                <Route path="/create/select" element={<Create />} />
             </Routes>
         </Router>
     );
