@@ -4,6 +4,7 @@ import Explore from "./routes/Explore";
 import Home from "./routes/Home";
 import ModalPage from "./ModalPage";
 import Create from "./routes/Create";
+import UserPage from "./routes/UserPage";
 
 function Instagram() {
     return (
@@ -15,6 +16,7 @@ function Instagram() {
                 <Route path="/direct/inbox" element={<Direct />} />
                 <Route path="/explore/" element={<Explore />} />
                 <Route path="/create/select" element={<Create />} />
+                <Route path="/id" element={<UserPage />} />
             </Routes>
         </Router>
     );
