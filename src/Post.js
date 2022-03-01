@@ -8,7 +8,20 @@ function Post() {
     const [isOpen, setIsOpen] = useState(false);
     const [slide, setSlide] = useState(0);
 
-    const slideImages = [{ width: `100%`, height: `100%`, backgroundImage: `url("/public/images/sea1.jpeg")` }, "/public/images/sea2.jpeg", "/public/images/sea3.jpeg"];
+    const slideImages = [styles.image1, styles.image2, styles.image3];
+
+    const leftSlide = () => {
+        if (0 < slide) {
+            setSlide(current => current - 1);
+        }
+    };
+
+    const rightSlide = () => {
+        if (slide < slideImages.length - 1) {
+            setSlide(current => current + 1);
+        }
+        console.log(slideImages.length);
+    };
 
     const openModal = () => {
         setIsOpen(true);
@@ -39,7 +52,9 @@ function Post() {
                     </div>
                 </div>
                 <div className={styles.container__image}>
-                    <div style={slideImages[0]}>ㅎㅇ</div>
+                    <div className={styles.slide__button__left} onClick={leftSlide}></div>
+                    <div className={styles.slide__button__right} onClick={rightSlide}></div>
+                    <div className={slideImages[slide]}></div>
                 </div>
                 {/* <div className={styles.each__slide}>
                 </div> */}
