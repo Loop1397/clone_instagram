@@ -148,21 +148,39 @@
     cursor: pointer;
 }
 
+@keyframes move__left {
+    from {
+        left: 612px;
+    }
+    to {
+        left: 0px;
+    }
+}
+
 .image1 {
-    width: 100%;
-    height: 100%;
+    width: 612px;
+    height: 612px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("/public/images/sea1.jpeg");
 }
 
 .image2 {
-    width: 100%;
-    height: 100%;
+    width: 612px;
+    height: 612px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("/public/images/sea2.jpeg");
 }
 
 .image3 {
-    width: 100%;
-    height: 100%;
+    width: 612px;
+    height: 612px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("/public/images/sea3.jpeg");
 }
 
