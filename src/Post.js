@@ -15,32 +15,35 @@ import Modal from "./Modal";
 
 function Post() {
     const [isOpen, setIsOpen] = useState(false);
-    const [slideIndex, setSlide] = useState(0);
+    const [slideIndex, setSlideIndex] = useState(0);
 
-    const slideImages = [styles.image1, styles.image2, styles.image3];
-    const slideStyles = [
-        {
-            position: "absolute",
-            right: "612px",
-        },
-        {
-            position: "absolute",
-            top: "0px",
-            left: "612px",
-        },
-    ];
+    const slideImages = [styles.image1, styles.image2, styles.image3, styles.image4];
+    // const slideStyles = [
+    //     // 왼
+    //     {
+    //         position: "absolute",
+    //         right: "100%",
+    //     },
+    //     // 오
+    //     {
+    //         position: "absolute",
+    //         top: "0px",
+    //         left: "100%",
+    //     },
+    // ];
+
+    const imageBoxWidth = slideImages.length * 100;
 
     const leftSlide = () => {
         if (0 < slideIndex) {
-            setSlide(current => current - 1);
+            setSlideIndex(current => current - 1);
         }
     };
 
     const rightSlide = () => {
         if (slideIndex < slideImages.length - 1) {
-            setSlide(current => current + 1);
+            setSlideIndex(current => current + 1);
         }
-        console.log(slideImages.length);
     };
 
     const openModal = () => {
@@ -56,19 +59,20 @@ function Post() {
 
     const imageIndexRendering = () => {
         const result = [];
-        // for (let i = 0; i < slideImages.length; i++) {
-        //     result.push(<span>{i}번째</span>);
+
+        for (let i = 0; i < slideImages.length; i++) {
+            result.push(<li key={`image${i + 1}`} className={slideImages[i]} style={{ left: `${i * 100}%` }}></li>);
+        }
+
+        // if (slideIndex !== 0) {
+        //     result.push(<li className={slideImages[slideIndex - 1]} style={slideStyles[0]}></li>);
         // }
 
-        if (slideIndex !== 0) {
-            result.push(<div className={slideImages[slideIndex - 1]} style={slideStyles[0]}></div>);
-        }
+        // result.push(<li className={slideImages[slideIndex]}></li>);
 
-        result.push(<div className={slideImages[slideIndex]}></div>);
-
-        if (slideIndex !== slideImages.length) {
-            result.push(<div className={slideImages[slideIndex + 1]} style={slideStyles[1]}></div>);
-        }
+        // if (slideIndex !== slideImages.length) {
+        //     result.push(<li className={slideImages[slideIndex + 1]} style={slideStyles[1]}></li>);
+        // }
 
         return result;
     };
@@ -93,21 +97,9 @@ function Post() {
                 <div className={styles.container__image}>
                     <div className={styles.slide__button__left} onClick={leftSlide}></div>
                     <div className={styles.slide__button__right} onClick={rightSlide}></div>
-                    {imageIndexRendering()}
-
-                    {/* <Swiper
-                        className="swiper-container"
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}
-                        onSwiper={swiper => console.log(swiper)}
-                        onSlideChange={() => console.log("slide change")}
-                    >
-                        <SwiperSlide>slide 1</SwiperSlide>
-                        <SwiperSlide>slide 2</SwiperSlide>
-                        <SwiperSlide>slide 3</SwiperSlide>
-                    </Swiper> */}
+                    <ul className={styles.image__box} style={{ width: `${imageBoxWidth}%`, left: `${slideIndex * -100}%` }}>
+                        {imageIndexRendering()}
+                    </ul>
                 </div>
                 <div className={styles.container__content}>하위</div>
                 <div className={styles.container__comment}>코멘트</div>
