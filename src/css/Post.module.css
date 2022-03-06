@@ -152,15 +152,6 @@
     z-index: 999;
 }
 
-@keyframes move__left {
-    from {
-        left: 612px;
-    }
-    to {
-        left: 0px;
-    }
-}
-
 .image__box {
     height: 100%;
 
