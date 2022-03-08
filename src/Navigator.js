@@ -27,7 +27,7 @@ function Navigator() {
                 <Button style={styles.nav__button} imgStyle={styles.nav__button__image} onclick={url => onclick(url)} value={5} image="/images/like.png" url="/" />
             </div>
             <div>
-                <Button style={styles.nav__button} imgStyle={styles.nav__button__image} onclick={url => onclick(url)} value={6} image="/images/logo.png" url="/" />
+                <Button style={styles.nav__button} imgStyle={styles.nav__button__image} onclick={url => onclick(url)} value={6} image="/images/logo.png" url="/id" />
             </div>
         </div>
     );
