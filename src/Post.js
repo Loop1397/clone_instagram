@@ -101,7 +101,7 @@ function Post() {
                         {imageIndexRendering()}
                     </ul>
                 </div>
-                <div className={styles.container__content}>하위</div>
+                <div className={styles.container__content}>게시판</div>
                 <div className={styles.container__comment}>코멘트</div>
             </div>
         </div>
