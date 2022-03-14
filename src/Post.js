@@ -18,19 +18,6 @@ function Post() {
     const [slideIndex, setSlideIndex] = useState(0);
 
     const slideImages = [styles.image1, styles.image2, styles.image3, styles.image4];
-    // const slideStyles = [
-    //     // 왼
-    //     {
-    //         position: "absolute",
-    //         right: "100%",
-    //     },
-    //     // 오
-    //     {
-    //         position: "absolute",
-    //         top: "0px",
-    //         left: "100%",
-    //     },
-    // ];
 
     const imageBoxWidth = slideImages.length * 100;
 
@@ -48,12 +35,10 @@ function Post() {
 
     const openModal = () => {
         setIsOpen(true);
-        // console.log("Hi!");
     };
 
     const closeModal = e => {
         setIsOpen(false);
-        // console.log("bye!");
         e.stopPropagation(); //이벤트 버블링을 막기 위한 메소드
     };
 
@@ -63,16 +48,6 @@ function Post() {
         for (let i = 0; i < slideImages.length; i++) {
             result.push(<li key={`image${i + 1}`} className={slideImages[i]} style={{ left: `${i * 100}%` }}></li>);
         }
-
-        // if (slideIndex !== 0) {
-        //     result.push(<li className={slideImages[slideIndex - 1]} style={slideStyles[0]}></li>);
-        // }
-
-        // result.push(<li className={slideImages[slideIndex]}></li>);
-
-        // if (slideIndex !== slideImages.length) {
-        //     result.push(<li className={slideImages[slideIndex + 1]} style={slideStyles[1]}></li>);
-        // }
 
         return result;
     };
