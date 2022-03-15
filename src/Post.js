@@ -3,16 +3,6 @@ import Button from "./Button";
 import styles from "./css/Post.module.css";
 import Modal from "./Modal";
 
-// import { Swiper } from "swiper";
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// import "swiper/swiper-bundle.min.css";
-// import "swiper/swiper.min.css";
-// import "swiper/components/navigation/navigation.min.css";
-
-// // import required modules
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
 function Post() {
     const [isOpen, setIsOpen] = useState(false);
     const [slideIndex, setSlideIndex] = useState(0);
@@ -52,6 +42,20 @@ function Post() {
         return result;
     };
 
+    const slideNumberRendering = () => {
+        const result = [];
+
+        for (let i = 0; i < slideImages.length; i++) {
+            if (i === slideIndex) {
+                result.push(<span className={styles.content__current__slide__number}>⦁</span>);
+                continue;
+            }
+            result.push(<span className={styles.content__slide__number}>⦁</span>);
+        }
+
+        return result;
+    };
+
     return (
         <div>
             <div className={styles.container}>
@@ -76,7 +80,9 @@ function Post() {
                         {imageIndexRendering()}
                     </ul>
                 </div>
-                <div className={styles.container__content}>게시판</div>
+                <div className={styles.container__content}>
+                    <div className={styles.content__buttons}>{slideNumberRendering()}</div>
+                </div>
                 <div className={styles.container__comment}>코멘트</div>
             </div>
         </div>
