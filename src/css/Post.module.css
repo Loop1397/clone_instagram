@@ -220,10 +220,12 @@
 
 .content__slide__number {
     color: rgb(161, 161, 161);
+    transition: 0.4s;
 }
 
 .content__current__slide__number {
     color: rgb(109, 159, 235);
+    transition: 0.4s;
 }
 
 .container__comment {
