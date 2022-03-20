@@ -72,7 +72,6 @@
 }
 
 .header__profile__id {
-    /* background-color: tomato; */
     width: 500px;
     height: 26px;
     float: left;
@@ -103,7 +102,6 @@
 }
 
 .header__control__button {
-    /* background-color: tomato; */
     width: 40px;
     height: 40px;
     font-size: 24px;
@@ -118,8 +116,6 @@
 }
 
 .container__image {
-    /* height: 0; */
-    /* padding-bottom: 100%; */
     width: 612px;
     height: 612px;
     position: relative;
