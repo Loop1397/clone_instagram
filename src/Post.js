@@ -82,6 +82,7 @@ function Post() {
                 </div>
                 <div className={styles.container__content}>
                     <div className={styles.content__buttons}>{slideNumberRendering()}</div>
+                    좋아요 ~개
                 </div>
                 <div className={styles.container__comment}>댓글 달기..</div>
             </div>
